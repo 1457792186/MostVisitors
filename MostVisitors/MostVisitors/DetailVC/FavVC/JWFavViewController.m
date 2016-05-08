@@ -31,6 +31,7 @@
     
     self.navigationItem.rightBarButtonItem = self.editItem;
     
+    
 //    self.favDataArray = [[NSMutableArray alloc]initWithCapacity:0];
     self.favDataArray = [NSMutableArray arrayWithArray:@[@"崩坏学园2禁止接触女王成就怎么做",@"删档了做任务的钻石会不会按照120%返还?",@"崩坏学园2非洲新人的雾海庄园BOSS技巧",@"崩坏学园2炎狼维克多综合实力解析",@"崩坏学园2普罗米修斯的咆哮实战心得"]];
     if (self.favDataArray.count == 0) {
