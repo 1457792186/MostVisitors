@@ -8,6 +8,12 @@
 
 #import <AFNetworking/AFNetworking.h>
 
+
+#define JWBasicURL @"http://www.quweiwu.com"
+#define JWURLPath @"api.php"
+
 @interface JWAFNManger : AFHTTPSessionManager
+
+
 
 @end

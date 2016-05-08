@@ -14,21 +14,8 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_bg" translatesAutoresizingMaskIntoConstraints="NO" id="qiH-rR-zHJ">
-                    <rect key="frame" x="-20" y="0.0" width="640" height="600"/>
-                </imageView>
-            </subviews>
-            <constraints>
-                <constraint firstAttribute="trailing" secondItem="qiH-rR-zHJ" secondAttribute="trailing" constant="-20" id="Jmy-b2-DlT"/>
-                <constraint firstItem="qiH-rR-zHJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RkO-j7-nGr"/>
-                <constraint firstAttribute="bottom" secondItem="qiH-rR-zHJ" secondAttribute="bottom" id="VkW-IZ-Xa1"/>
-                <constraint firstItem="qiH-rR-zHJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-20" id="rJ2-th-WPa"/>
-            </constraints>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="406" y="348"/>
         </view>
     </objects>
-    <resources>
-        <image name="menu_bg" width="1024" height="1024"/>
-    </resources>
 </document>

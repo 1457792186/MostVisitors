@@ -10,4 +10,13 @@
 
 @implementation JWBottomCotentModel
 
+- (instancetype)initWithDic:(NSDictionary *)dataDic{
+    self = [super init];
+    if (self) {
+        [self setValuesForKeysWithDictionary:dataDic];
+    }
+    return self;
+}
+
+
 @end

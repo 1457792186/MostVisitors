@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JWBannerContentModel.h"
 
 @interface JWBannerModel : NSObject
+
+@property (nonatomic,strong)NSMutableArray * banners;
+
+- (instancetype)initWithArr:(NSArray * )arr;
 
 @end

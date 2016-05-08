@@ -16,7 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    UINavigationBar * navBar = [[UINavigationBar alloc]init];
+    navBar.backgroundColor = [UIColor colorWithHexString:@"#ee4f7c"];
+    navBar.barTintColor = [UIColor colorWithHexString:@"#ee4f7c"];
+    
+    [self setValue:navBar forKey:@"navigationBar"];
+    
+    NSDictionary * dict = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+    self.navigationBar.titleTextAttributes = dict;
 }
 
 - (void)didReceiveMemoryWarning {

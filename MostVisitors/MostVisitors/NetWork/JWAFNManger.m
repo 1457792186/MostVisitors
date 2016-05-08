@@ -10,4 +10,15 @@
 
 @implementation JWAFNManger
 
+- (instancetype)init
+{
+    self = [super initWithBaseURL:[NSURL URLWithString:JWBasicURL]];
+    if (self) {
+        self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json",nil];
+    }
+    return self;
+}
+
+
+
 @end

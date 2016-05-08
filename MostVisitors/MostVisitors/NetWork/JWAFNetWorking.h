@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JWAFNManger.h"
 
 @interface JWAFNetWorking : NSObject
+
+@property (nonatomic,strong)JWAFNManger * manger;
+
++ (id)manger;
+
 
 @end

@@ -10,4 +10,12 @@
 
 @implementation JWListContentModel
 
+- (instancetype)initWithDic:(NSDictionary * )dic{
+    self = [super init];
+    if (self) {
+        [self setValuesForKeysWithDictionary:dic];
+    }
+    return self;
+}
+
 @end

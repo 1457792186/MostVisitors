@@ -33,7 +33,7 @@
         [btn setImage:[UIImage imageNamed:selectImage] forState:UIControlStateHighlighted];
     }
     
-    btn.frame = CGRectMake(0.f, 0.f, 20.f, 30.f);
+    btn.frame = CGRectMake(0.f, 0.f, 30.f, 30.f);
     
     btn.contentHorizontalAlignment = alignment;
     

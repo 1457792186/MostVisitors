@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JWBottomCotentModel.h"
 
 @interface JWBottomModel : NSObject
+
+@property (nonatomic,strong)NSMutableArray * contentArr;
+
+- (instancetype)initWithArr:(NSArray *)dataArr;
 
 @end

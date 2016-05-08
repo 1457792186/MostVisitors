@@ -7,6 +7,10 @@
 //
 
 #import "JWShowViewController.h"
+#import "JWWebDetailViewController.h"
+#import "JWListTableViewCell.h"
+#import "JWHomeTableView.h"
+
 
 @interface JWHomeViewController : JWShowViewController
 

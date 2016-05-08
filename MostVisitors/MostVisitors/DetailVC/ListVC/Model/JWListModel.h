@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JWListContentModel.h"
+
 
 @interface JWListModel : NSObject
+@property (nonatomic,strong)NSMutableArray * list;
+
+- (instancetype)initWithArray:(NSArray * )arr;
 
 @end

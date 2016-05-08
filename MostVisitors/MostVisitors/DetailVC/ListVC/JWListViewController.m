@@ -8,30 +8,60 @@
 
 #import "JWListViewController.h"
 
+
 @interface JWListViewController ()
 
 @end
 
 @implementation JWListViewController
 
+- (instancetype)initWithModel:(JWBottomCotentModel*)model withBack:(BOOL)isBack{
+    self = [super init];
+    if (self) {
+        self.model = model;
+        self.title = model.title;
+        self.isBack = isBack;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    if (self.isBack) {
+        self.navigationItem.leftBarButtonItem = [UIBarButtonItem barItemWithImageName:@"back" withSelectImage:@"back" withHorizontalAlignment:UIControlContentHorizontalAlignmentLeft withTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
+    }
+    
+    [self.showtableView registerNib:[UINib nibWithNibName:@"JWListTableViewCell" bundle:nil] forCellReuseIdentifier:@"JWListTableViewCell"];
+    self.showtableView.model = self.model;
+    
+    [self.showtableView downRefreshGetData];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+
+#pragma mark - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80.f;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - UITableViewDataSource
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    JWWebDetailViewController * webVC = [[JWWebDetailViewController alloc]initWithModel:self.showtableView.dataArray[indexPath.row]];
+    
+    [self.navigationController pushViewController:webVC animated:YES];
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.showtableView.dataArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    JWListTableViewCell * listCell = [tableView dequeueReusableCellWithIdentifier:@"JWListTableViewCell"];
+    listCell.model = self.showtableView.dataArray[indexPath.row];
+    return listCell;
+}
+
 
 @end

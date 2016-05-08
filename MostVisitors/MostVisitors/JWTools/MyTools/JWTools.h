@@ -12,6 +12,12 @@
 
 @interface JWTools : NSObject
 
+/**
+ *  获取工程版本
+ *
+ *  @return 工程版本
+ */
++ (NSString *)getProjectVersion;
 
 /**
  *  实现数组的排序功能
@@ -34,6 +40,8 @@
  *  @return 文字所占的区域大小
  */
 + (CGSize)sizeForText:(NSString *)text withFont:(UIFont *)font withSize:(CGSize)size;
+
+
 
 
 #pragma mark - FilePath

@@ -7,7 +7,16 @@
 //
 
 #import "JWShowViewController.h"
+#import "JWListContentModel.h"
+#import "JWAFNetWorking.h"
+
 
 @interface JWWebDetailViewController : JWShowViewController
+
+@property (nonatomic,copy)NSString * loadURL;
+
+- (instancetype)initWithModel:(JWListContentModel*)model;
+
+- (instancetype)initWithURL:(NSString *)loadURL;
 
 @end

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface JWHomeTableHeadeView : UIView
+@property (weak, nonatomic) IBOutlet UILabel *homeHeaderLabel;
 
 @end

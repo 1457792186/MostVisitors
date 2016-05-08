@@ -10,4 +10,17 @@
 
 @implementation JWBannerContentModel
 
+- (instancetype)initWithDic:(NSDictionary *)dataDic{
+    self = [super init];
+    if (self) {
+        self.title = dataDic[@"title"];
+        self.thumb = dataDic[@"thumb"];
+        self.type = dataDic[@"type"];
+        self.myGoto = dataDic[@"goto"];
+        
+    }
+    return self;
+}
+
+
 @end

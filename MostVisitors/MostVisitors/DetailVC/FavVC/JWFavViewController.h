@@ -9,5 +9,9 @@
 #import "JWShowViewController.h"
 
 @interface JWFavViewController : JWShowViewController
+@property (weak, nonatomic) IBOutlet UITableView *favTableView;
+
+@property (nonatomic,strong)NSMutableArray * favDataArray;
+@property (nonatomic,assign)BOOL isBack;
 
 @end

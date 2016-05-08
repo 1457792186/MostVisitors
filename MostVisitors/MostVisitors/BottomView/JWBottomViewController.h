@@ -12,9 +12,4 @@
 @interface JWBottomViewController : UIViewController
 
 
-@property (weak, nonatomic) IBOutlet JWBottomTableView *contentTableView;
-
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *contentTableViewWidth;
-
-
 @end

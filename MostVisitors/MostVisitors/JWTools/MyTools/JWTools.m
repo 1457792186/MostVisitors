@@ -10,6 +10,19 @@
 
 @implementation JWTools
 
+
+/**
+ *  获取工程版本
+ *
+ *  @return 工程版本
+ */
++ (NSString *)getProjectVersion{
+    NSString *key = @"CFBundleShortVersionString";
+    NSDictionary *dict = [NSBundle mainBundle].infoDictionary;
+    NSString *version = dict[key];
+    return version;
+};
+
 /**
  *  实现数组的排序功能
  *

@@ -8,8 +8,12 @@
 
 #import "AppDelegate.h"
 #import "JWBottomViewController.h"
+#import "JWHomeViewController.h"
+#import "JWNavigationViewController.h"
+#import "RESideMenu.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<RESideMenuDelegate>
+@property (nonatomic, strong)RESideMenu * sideMenu;
 
 @end
 
@@ -17,12 +21,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    JWNavigationViewController * showNav =[[JWNavigationViewController alloc]initWithRootViewController:[[JWHomeViewController alloc]init]];
     
-    self.window = [UIWindow windowInitWithRootViewController:[[JWBottomViewController alloc]init]];
+    self.sideMenu = [[RESideMenu alloc] initWithContentViewController:showNav leftMenuViewController:[[JWBottomViewController alloc]init] rightMenuViewController:nil];
+    self.sideMenu.backgroundImage = [UIImage imageNamed:@"menu_bg"];
+    
+    
+    self.window = [UIWindow windowInitWithRootViewController:self.sideMenu];
     
     
     return YES;
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

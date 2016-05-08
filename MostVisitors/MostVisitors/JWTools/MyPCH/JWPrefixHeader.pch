@@ -20,6 +20,11 @@
 #define JWLog(...)
 #endif
 
+#define jSCREENWIDTH [UIScreen mainScreen].bounds.size.width
+#define jSCREENHEIGH [UIScreen mainScreen].bounds.size.height
+
 #import "JWClass.h"
+
+#import "JWAFNetWorking.h"
 
 #endif /* JWPrefixHeader_pch */

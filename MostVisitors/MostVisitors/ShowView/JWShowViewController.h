@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JWBottomCotentModel.h"
 
 @interface JWShowViewController : UIViewController
 
+@property (nonatomic,strong)JWBottomCotentModel * model;
+
+- (void)backAction;
 @end
